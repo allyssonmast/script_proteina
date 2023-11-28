@@ -23,8 +23,6 @@ for concentration in concentrations:
     # Calcular a média do RGB para a imagem atual
     image_rgb = np.mean(image, axis=(0, 1))
 
-    print(image_rgb)
-
     image_rgb_mean = np.sum(image_rgb) / 3
 
     # Calcular log10(RGB padrão / Média do RGB) e adicionar à lista log_ratios
@@ -34,7 +32,6 @@ for concentration in concentrations:
 
 # Converter log_ratios para um array numpy
 log_ratios = np.array(log_ratios)
-
 
 # Definir a função da curva para o ajuste (uma linha reta neste caso)
 def func(x, a, b):
